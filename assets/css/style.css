@@ -23,6 +23,7 @@
   --bg-color: #fff;
   --light-gray-color: #f6f6f5;
   --primary-light-color: #f5e8e8;
+  --secondary-light-color: #5f8cc9;
   --primary-font: 'Red Hat Display', sans-serif;
   --primary-font-size: 16px;
   --primary-heading-size: 32px;
@@ -31,17 +32,27 @@
 
 body {
   background: #fff;
+  padding-top: 100px;
 }
 
 /* header section */
 
-.header {
+.inner-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 40px;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -51,7 +62,7 @@ body {
 }
 
 .logo img {
-  width: 200px;
+  width: 210px;
 }
 
 .nav ul {
@@ -64,14 +75,14 @@ body {
 .nav ul li a {
   text-decoration: none;
   color: #222;
-  font-weight: 700;
-  font-size: var(--primary-font-size);
+  font-weight: 800;
+  font-size: 13px;
   transition: color 0.3s ease;
 }
 
 .nav ul li a.active,
 .nav ul li a:hover {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .nav ul li a i {
@@ -90,54 +101,58 @@ body {
   align-items: center;
   justify-content: center;
   font-size: var(--primary-font-size);
-  font-weight: 700;
+  font-weight: 800;
   border-radius: 6px;
-  padding: 8px 16px;
+  padding: 4px 16px;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 .theme-btn.pink {
-  background: var(--primary-color);
-  color: #fff;
+ background: var(--primary-color);
+    color: #fff;
+    padding: 4px 21px;
+    border-radius: 12px;
 }
 
 .theme-btn.pink:hover {
   background: var(--primary-color);
 }
 
-.theme-btn.red {
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  background: #fff;
+.emergency{
+ color: red;
+    border: 2px solid red;
+    border-left: none;
+    background: #fff;
+    position: relative;
+    left: -32px;
+    padding: 0px 34px;
+    font-size: 17px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 0;
+    font-weight: 800;
 }
 
 .theme-btn.red i {
-  margin-right: 6px;
-  color: var(--primary-color);
-}
-
-.theme-btn.red:hover {
-  background: var(--primary-color);
-  color: #fff;
-}
-
-.theme-btn.red:hover i {
-  color: #fff;
+    margin-right: 6px;
+    color: red;
+    font-size: 27px;
+    z-index: 1;
 }
 
 /* banner section */
 
 .banner-section {
     width: 100%;
-    height: 440px;
+    /*height: 440px;*/
     overflow: hidden;
 }
 
 .banner-section img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /*object-fit: cover;*/
     object-position: center;
 }
 
@@ -164,7 +179,7 @@ body {
     border: none;
     padding: 15px 30px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
     border-radius: 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -181,7 +196,7 @@ body {
     border: none;
     padding: 15px 30px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
     border-radius: 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -219,25 +234,33 @@ body {
 .about-content p {
     font-weight: 700;
     line-height: 2;
+    text-align:justify;
 }
 
 .about-btn {
-    width: 150px;
+      width: 150px;
     text-align: center;
     text-decoration: none;
     background-color: var(--primary-color);
     color: #ffffff;
     border: 2px solid var(--primary-light-color);
     border-radius: 10px;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
-    padding: 5px 10px;
+    padding: 9px 24px;
+    transition: all 0.3s;
+}
+
+.about-btn:hover {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-light-color);
 }
 
 /* progress section */
 
 .progress-section {
-    background-color: var(--primary-light-color);
+    /*background-color:#FAF3F3;*/
+        background: rgb(245, 232, 232);
 }
 
 .progress-card {
@@ -248,8 +271,8 @@ body {
 }
 
 .progress-card .progress-img-wrapper {
-    width: 100px;
-    height: 150px;
+      width: 74px;
+    height: 139px;
 }
 
 .progress-card .progress-img-wrapper img {
@@ -262,7 +285,7 @@ body {
 .progress-card .progress-title {
     color: var(--secondary-color);
     font-size: var(--primary-heading-size);
-    font-weight: 1000;
+    font-weight: 900;
 }
 
 .progress-card .progress-subtitle {
@@ -276,7 +299,7 @@ body {
 /* care section */
 
 .care-section {
-    padding: 60px 0 0 0;
+    padding: 60px 0 60px 0;
     background: url('/assets/img/care-bg.png') no-repeat center center/cover;
 }
 
@@ -286,6 +309,7 @@ body {
     font-size: var(--section-title-size);
     color: var(--primary-color);
     text-transform: uppercase;
+    font-weight:800;
 }
 
 .section-subtitle {
@@ -313,7 +337,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .care-highlights .single-care-highlights .icon {
@@ -337,6 +361,7 @@ body {
     letter-spacing: 1px;
     margin: 0;
     width: 80%;
+    font-weight:900;
 }
 
 .care-content {
@@ -350,6 +375,7 @@ body {
 .care-content p {
     font-weight: 600;
     line-height: 2;
+    text-align: justify;
 }
 
 /* speciality section */
@@ -360,7 +386,7 @@ body {
 }
 
 .speciality-section .progress-card .progress-title {
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -410,6 +436,7 @@ body {
 
 .doctor-info {
   padding: 20px;
+  height: 430px;
 }
 
 .doctor-info h5 {
@@ -418,15 +445,15 @@ body {
   line-height: 1.5;
   text-transform: uppercase;
   padding-bottom: 10px;
-  font-weight: 600;
-  border-bottom: 2px solid var(--primary-color);
+  font-weight: 700;
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .doctor-info h3 {
   color: var(--secondary-color);
   font-size: 18px;
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .qualifications {
@@ -434,14 +461,14 @@ body {
   color: var(--text-color);
   line-height: 1.5;
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .doctor-info h4 {
   color: var(--primary-color);
   font-size: 14px;
   margin: 10px 0 6px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .doctor-info ul {
@@ -452,14 +479,14 @@ body {
 
 .doctor-info ul li {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.8;
   color: #333;
 }
 
 .book-appointment-btn {
   position: absolute;
-  bottom: -10px;
+  bottom: -19px;
   left: 50%;
   transform: translateX(-50%);
   width: max-content;
@@ -471,7 +498,7 @@ body {
   color: #ffffff;
   border: 2px solid var(--primary-light-color);
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   padding: 5px 10px;
 }
@@ -498,7 +525,7 @@ body {
 }
 
 .health-icon-section .progress-card .progress-title {
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -532,7 +559,7 @@ body {
   border-radius: 20px;
   padding: 25px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  min-height: 300px;
+  min-height: 300px !important;
   transition: 0.3s ease;
 }
 
@@ -544,6 +571,7 @@ body {
   font-size: 18px;
   margin-bottom: 0;
   color: #111;
+  font-weight:bold;
 }
 
 .stars {
@@ -553,7 +581,8 @@ body {
 
 .testimonial-card p {
   color: #444;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.6;
   margin: 0;
 }
@@ -573,10 +602,21 @@ body {
 }
 
 /* Custom Arrows */
+/*.slick-prev:before,*/
+/*.slick-next:before {*/
+/*  color: var(--gray-color) !important;*/
+/*  font-size: 30px !important;*/
+/*}*/
+
+.slick-prev, .slick-next {
+    font-size: 30px !important;
+    line-height: auto !important;
+    color: var(--gray-color) !important;
+}
+
 .slick-prev:before,
 .slick-next:before {
-  color: var(--gray-color) !important;
-  font-size: 30px !important;
+    content: none !important;
 }
 
 .slick-prev {
@@ -591,7 +631,7 @@ body {
 /* latest news section */
 
 .progress-section.latest-news-section {
-  margin-top: 270px;
+  margin-top: 290px;
   height: 350px;
 }
 
@@ -609,11 +649,13 @@ body {
   border-bottom: 2px solid var(--primary-color);
   width: max-content;
   color: #ffffff;
+  font-weight: 600;
 }
 
 .single-news-wrapper .single-news-content span {
-  color: #ffffff;
-
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .single-news-content {
@@ -630,7 +672,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 50px;
+  bottom: -320px;
 }
 
 .latest-news-overall-wrapper {
@@ -716,9 +758,10 @@ body {
 }
 
 .featured-overlay p {
-  font-size: 15px;
+  font-size: 20px;
   margin: 0;
   color: #ddd;
+  font-weight:bold;
 }
 
 .featured-overlay span {
@@ -729,14 +772,14 @@ body {
 }
 
 .featured-overlay .btn {
-  background: #000;
-  color: #fff;
-  font-size: 13px;
-  padding: 6px 14px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
+    background: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 22px;
+    border: 1px solid white;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .featured-overlay .btn:hover {
@@ -747,14 +790,14 @@ body {
 .side-blogs {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   gap: 2rem;
 }
 
 .side-blog {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 36px;
   background: #fff;
   border-radius: 4px;
   padding: 8px;
@@ -790,8 +833,8 @@ body {
   background: transparent;
   border: 1px solid #333;
   color: #383e48;
-  font-size: 12px;
-  padding: 4px 15px;
+  font-size: 10px;
+  padding: 1px 15px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
@@ -804,6 +847,10 @@ body {
 }
 
 /* faq section */
+
+.progress-section.faq-section {
+    background: var(--primary-light-color) !important;
+}
 
 .faq-section .accordion-flush>.accordion-item,
 .faq-section .accordion-header, .faq-section .accordion-button {
@@ -821,4 +868,330 @@ body {
 
 .faq-section .accordion-button:not(.collapsed) {
   color: var(--text-color);
+}
+
+.map-section {
+       
+  height: 70vh;         
+  overflow: hidden;
+}
+
+.map-section iframe {
+  width: 100%;         
+  height: 100%;          
+  border: 0;
+}
+
+ .contact-section {
+     padding: 60px 0;
+     background: #fff;
+     box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-section .logo img {
+      width:100%;
+    }
+
+    .contact-section h5 {
+     color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+    }
+
+    .contact-section p {
+       margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+     line-height: 2;
+    }
+    /*.social-icons{*/
+    /*    position:relative;*/
+    /*    bottom:30px;*/
+    /*}*/
+
+    .contact-info i {
+      width: 28px;
+    height: 28px;
+    background-color: #ff4f87;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 13px;
+    flex-shrink: 0;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: #505257;
+    }
+
+    .contact-number a {
+      font-size: 20px;
+    }
+
+    .appointment-box {
+      background: #fff;
+      border-radius: 15px;
+      border: 1px solid var(--primary-color);
+      padding: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+     .appointment-box .form-header {
+       background: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-radius: 12px;
+
+}
+
+    .appointment-box .form-control {
+      border-radius: 20px;
+      border: 1px solid var(--primary-color);
+      margin-bottom: 15px;
+    }
+    .appointment-box .form-control:focus {
+    border-color: var(--primary-color); 
+    box-shadow: none; 
+    outline: none; 
+}
+
+
+    .form-check-label {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #333;
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .follow-us {
+      font-weight: bold;
+      color:var(--primary-color);
+    }
+    
+    .form-check-input {
+    display: none;
+}
+
+.contact-info ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    font-size:14px;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 10px;
+}
+.social-icons a {
+             display: inline-block;
+    margin-right: 10px;
+    /* font-size: 25px; */
+    color: var(--primary-color);
+    background: white;
+    padding: 4px 4px;
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 3px solid #ff8eb3;
+    text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      background: var(--primary-color);
+      color: #fff;
+    }
+   .social-icons i {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 17px;
+    height: 34px;
+    width: 34px;
+    /* text-align: center; */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+    
+ .footer-section {
+     background-color: #383E48;
+  color: #fff;
+  padding: 60px 0 20px 0;
+}
+
+
+
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list h3 {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block; /* Key part */
+}
+
+.footer-list h3::after {
+content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--primary-color, #f50057);
+  margin-top: 8px;
+  width: 100%; 
+}
+
+/* ---- List Items ---- */
+.footer-list li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #c1c7d1;
+  line-height: 1.8;
+      padding-bottom: 3px;
+  position: relative; /* Make sure the pseudo-element is positioned correctly */
+}
+
+.footer-list li a::after {
+  content: ''; /* No text, just the underline */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Start with no underline */
+  height: 1px; /* Underline thickness */
+  background-color: #c1c7d1; /* Color of the underline */
+  transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer-list li a:hover::after {
+  width: 100%; /* Grow the underline to full width */
+}
+
+/* ---- Bottom Section ---- */
+.footer-bottom {
+  border-top: 1px solid  var(--primary-color);
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom .copyright {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.video-section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 550px; 
+  overflow: hidden;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.video-wrapper:hover .video-thumb {
+  filter: brightness(0.7);
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.play-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #ff4081;
+  clip-path: polygon(30% 20%, 80% 50%, 30% 80%);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.7);
+}
+
+.progress-section.latest-news-second-section .about-btn{
+    padding: 9px 53px;
+    font-weight:700;
+}
+
+.progress-section.faq-section .section-title{
+    text-decoration:underline;
+    text-align: left;
+    font-size: 36px;
+
+}
+
+.accordion .accordion-header,
+.accordion .accordion-body {
+    font-size: 18px;
+}
+
+#accordionFlushExample .accordion-button {
+    padding: 30px 0 !important;
+}
+
+#accordionFlushExample .accordion-button,
+#accordionFlushExample .accordion-body {
+    font-size: 18px;
+    font-weight:600;
+}
+
+#accordionFlushExample .accordion-button::after {
+    color: #004AAD; 
+    font-weight:800;
+}
+
+.doctors-section .about-btn{
+    padding: 7px 32px;
+        font-weight: 800;
+}
+
+.doctors-slider .slick-slide {
+    margin: 20px 30px;
+}
+
+.footer-links li{
+    font-size:14px;
+}
+
+.contact-info {
+    color: #505257;
 }

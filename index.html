@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/img/favicon.webp" type="image/x-icon">
     <title>Lifeline Hospital</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/responsive.css">
@@ -24,60 +25,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    
+    <!--Sal Js-->
+    <link rel="stylesheet" href="//unpkg.com/sal.js/dist/sal.css">
+    <script src="//unpkg.com/sal.js/dist/sal.js"></script>
 
 </head>
 <body>
 
     <header class="header">
-        <div class="logo">
-        <img src="/assets/img/logo.png" alt="Lifeline Logo" />
-        </div>
-
-        <nav class="nav">
-        <ul>
-            <li><a href="#" class="active">SPECIALTIES <!-- <i class="fa-solid fa-chevron-down"></i> --> </a></li>
-            <li><a href="#">BARIATRICS / METABOLICS</a></li>
-            <li><a href="#">HEALTH PACKAGES</a></li>
-        </ul>
-        </nav>
-
-        <div class="header-buttons">
-        <a href="#" class="theme-btn pink">APPOINTMENTS</a>
-        <a href="#" class="theme-btn red">
-            <i class="fa-solid fa-truck-medical"></i> EMERGENCY
-        </a>
+        <div class="container">
+            <div class="inner-header">
+                <div class="logo" data-sal="fade" data-sal-duration="1000">
+                    <img src="/assets/img/logo-lifeline.webp" alt="Lifeline Logo" />
+                </div>
+        
+                <nav class="nav">
+                <ul>
+                    <li data-sal="fade" data-sal-duration="1000"><a href="#" class="active">SPECIALTIES  <i class="fa-solid fa-chevron-down text-dark"></i>  </a></li>
+                    <li data-sal="fade" data-sal-duration="1000" data-sal-delay="100"><a href="#">BARIATRICS / METABOLICS</a></li>
+                    <li data-sal="fade" data-sal-duration="1000" data-sal-delay="200"><a href="#">HEALTH PACKAGES</a></li>
+                </ul>
+                </nav>
+        
+                <div class="header-buttons">
+                <a data-sal="fade" data-sal-duration="1000" data-sal-delay="300" href="#" class="theme-btn pink">APPOINTMENTS</a>
+                <a data-sal="fade" data-sal-duration="1000" data-sal-delay="400" href="#" class="theme-btn red">
+                    <i class="fa-solid fa-truck-medical"></i> <span class="emergency">EMERGENCY</span>
+                </a>
+                </div>
+            </div>
         </div>
     </header>
-
-    <section class="banner-section">
+    
+    <section class="banner-section" data-sal="fade" data-sal-duration="1000">
         <img src="/assets/img/banner.png" alt="banner">
     </section>
-
-    <section class="buttons-section py-2">
-        <div class="buttons-container">
-            <button class="pink-btn">
-                Book Appointment
-            </button>
-            <button class="gray-btn">
-                Find a Doctor
-            </button>
-            <button class="pink-btn">
-                Emergency care
-            </button>
+    
+    <div class="container">
+        <section class="buttons-section py-2">
+            <div class="buttons-container">
+                <button class="pink-btn" data-sal="slide-down" data-sal-duration="2000">  <i class="fa-solid fa-calendar-check me-2"></i>
+                    Book Appointment
+                </button>
+                <button class="gray-btn" data-sal="slide-down" data-sal-duration="2000" data-sal-delay="100"><i class="fa-solid fa-user-doctor me-2"></i>
+                    Find a Doctor
+                </button>
+                <button class="pink-btn" data-sal="slide-down" data-sal-duration="2000" data-sal-delay="200"><i class="fa-solid fa-calendar-check me-2"></i>
+                    Emergency care
+                </button>
+            </div>
+        </section>
+    </div>
+    
+    <section class="video-section" data-sal="fade" data-sal-duration="1000">
+      <div class="container-fluid">
+        <div class="video-wrapper">
+          <a href="https://www.youtube.com/watch?v=YNfIDH93pNY" class="glightbox video-link">
+            <img 
+              src="https://img.youtube.com/vi/YNfIDH93pNY/maxresdefault.jpg" 
+              alt="Hospital Video Thumbnail"
+              class="video-thumb"
+            >
+            <div class="play-overlay">
+              <div class="play-icon"></div>
+            </div>
+          </a>
         </div>
+      </div>
     </section>
 
     <section class="about-section">
-        <div class="row w-100">
-            <div class="col-lg-6">
-                <div class="about-image">
-                    <img src="/assets/img/about_img.webp" alt="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-image" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100">
+                        <img src="/assets/img/about_img.webp" alt="about">
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center">
-                <div class="about-content">
-                    <p>Dr. J S Rajkumar, fondly known as Dr. JSR, was a studious and an enthusiastic medical student, who won 32 Gold medals and the Johnston best outgoing student award at the Madras Medical College . He received four medical specializations from the Royal College of Surgeons in the United Kingdom. </p>
-                    <a href="#" class="about-btn">Read More</a>
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="about-content" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="200">
+                        <p>Dr. J S Rajkumar, fondly known as Dr. JSR, was a studious and an enthusiastic medical student, who won 32 Gold medals and the Johnston best outgoing student award at the Madras Medical College . He received four medical specializations from the Royal College of Surgeons in the United Kingdom. </p>
+                        <a href="#" class="about-btn">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,7 +120,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/progress-icon-01.png" alt="progress-icon-01">
                         </div>
@@ -96,7 +129,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/progress-icon-02.png" alt="progress-icon-02">
                         </div>
@@ -105,7 +138,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/progress-icon-03.png" alt="progress-icon-03">
                         </div>
@@ -114,7 +147,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="400">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/progress-icon-01.png" alt="progress-icon-01">
                         </div>
@@ -130,77 +163,77 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         Bariatric / Metabolic Care Excellence
                     </h2>
-                    <p class="section-subtitle">Changing Lives, From Children to Adults, with Proven Results</p>
+                    <p class="section-subtitle" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">Changing Lives, From Children to Adults, with Proven Results</p>
                 </div>
             </div>
-        </div>
-        <div class="row w-100">
-            <div class="col-lg-3">
-                <div class="care-image">
-                    <img src="/assets/img/care-side-img.png" alt="care-side-img">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="care-image" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100">
+                        <img src="/assets/img/care-side-img.png" alt="care-side-img">
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-5 pt-lg-5 pt-0">
-                <div class="care-highlights">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="single-care-highlights">
-                                <div class="icon">
-                                    <img src="/assets/img/care-icon-01.png" alt="care-icon-01">
+                <div class="col-lg-5 pt-lg-5 pt-0">
+                    <div class="care-highlights" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="single-care-highlights">
+                                    <div class="icon">
+                                        <img src="/assets/img/care-icon-01.png" alt="care-icon-01">
+                                    </div>
+                                    <p class="single-care-title">Significant Weight Loss</p>
                                 </div>
-                                <p class="single-care-title">Significant Weight Loss</p>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="single-care-highlights">
-                                <div class="icon">
-                                    <img src="/assets/img/care-icon-04.png" alt="care-icon-04">
+                            <div class="col-6">
+                                <div class="single-care-highlights">
+                                    <div class="icon">
+                                        <img src="/assets/img/care-icon-04.png" alt="care-icon-04">
+                                    </div>
+                                    <p class="single-care-title">Boosted Confidence</p>
                                 </div>
-                                <p class="single-care-title">Boosted Confidence</p>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="single-care-highlights">
-                                <div class="icon">
-                                    <img src="/assets/img/care-icon-02.png" alt="care-icon-02">
+                            <div class="col-6">
+                                <div class="single-care-highlights">
+                                    <div class="icon">
+                                        <img src="/assets/img/care-icon-02.png" alt="care-icon-02">
+                                    </div>
+                                    <p class="single-care-title">Improved Overall Health</p>
                                 </div>
-                                <p class="single-care-title">Improved Overall Health</p>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="single-care-highlights">
-                                <div class="icon">
-                                    <img src="/assets/img/care-icon-02.png" alt="care-icon-02">
+                            <div class="col-6">
+                                <div class="single-care-highlights">
+                                    <div class="icon">
+                                        <img src="/assets/img/care-icon-02.png" alt="care-icon-02">
+                                    </div>
+                                    <p class="single-care-title">Improved Heart Health</p>
                                 </div>
-                                <p class="single-care-title">Improved Heart Health</p>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="single-care-highlights">
-                                <div class="icon">
-                                    <img src="/assets/img/care-icon-03.png" alt="care-icon-03">
+                            <div class="col-6">
+                                <div class="single-care-highlights">
+                                    <div class="icon">
+                                        <img src="/assets/img/care-icon-03.png" alt="care-icon-03">
+                                    </div>
+                                    <p class="single-care-title">Controls Diabetes & Hypertension</p>
                                 </div>
-                                <p class="single-care-title">Controls Diabetes & Hypertension</p>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="single-care-highlights">
-                                <div class="icon">
-                                    <img src="/assets/img/care-icon-06.png" alt="care-icon-06">
+                            <div class="col-6">
+                                <div class="single-care-highlights">
+                                    <div class="icon">
+                                        <img src="/assets/img/care-icon-06.png" alt="care-icon-06">
+                                    </div>
+                                    <p class="single-care-title">Ease Joint Pain & Breath Strain</p>
                                 </div>
-                                <p class="single-care-title">Ease Joint Pain & Breath Strain</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 pt-lg-5 pt-0">
-                <div class="care-content">
-                    <p>At Lifeline Hospital, we are trusted as one of the leading centers for <b>Bariatric & Metabolic surgeries,</b> helping patients begin a healthier, happier life. With <b>500+ successful surgeries</b> and recognition as the Best Hospital for Bariatrics by Times Health Awards, our care speaks for itself. We are proud to have even changed the life of a <b>5-year-old child through a rare bariatric surgery.</b></p>
-                    <a href="#" class="about-btn">Read More</a>
+                <div class="col-lg-4 pt-lg-5 pt-0">
+                    <div class="care-content" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="300">
+                        <p>At Lifeline Hospital, we are trusted as one of the leading centers for <b>Bariatric & Metabolic surgeries,</b> helping patients begin a healthier, happier life. With <b>500+ successful surgeries</b> and recognition as the Best Hospital for Bariatrics by Times Health Awards, our care speaks for itself. We are proud to have even changed the life of a <b>5-year-old child through a rare bariatric surgery.</b></p>
+                        <a href="#" class="about-btn">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,13 +243,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-5">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         Lifeline Specialities
                     </h2>
-                    <p class="section-subtitle">A New Form of Personalized Care</p>
+                    <p class="section-subtitle" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">A New Form of Personalized Care</p>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/spacial-icon-01.png" alt="spacial-icon-01">
                         </div>
@@ -225,7 +258,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/spacial-icon-02.png" alt="spacial-icon-02">
                         </div>
@@ -234,7 +267,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/spacial-icon-03.png" alt="spacial-icon-03">
                         </div>
@@ -243,7 +276,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="700">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/spacial-icon-04.png" alt="spacial-icon-04">
                         </div>
@@ -252,127 +285,192 @@
                     </div>
                 </div>
                 <div class="col-12 text-center mt-5">
-                    <a href="#" class="about-btn">View All Specialities</a>
+                    <a href="#" class="about-btn" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">View All Specialities</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="doctors-section">
-        <h2 class="section-title">OUR DOCTORS</h2>
-        <p class="section-subtitle">Lifeline Multispeciality Consultants</p>
+        <h2 class="section-title" data-sal="fade" data-sal-duration="1000" data-sal-delay="100">OUR DOCTORS</h2>
+        <p class="section-subtitle" data-sal="fade" data-sal-duration="1000" data-sal-delay="300">Lifeline Multispeciality Consultants</p>
 
-        <div class="doctors-container">
+        <div class="doctors-container doctors-slider">
 
-        <!-- Doctor 1 -->
-        <div class="doctor-card">
-            <img src="/assets/img/doctors-01.png" alt="Dr JS Rajkumar" class="doctor-img">
-            <div class="doctor-info">
-            <h5>CHAIRMAN & CHIEF ROBOTIC <br> & LAPAROSCOPIC SURGEON</h5>
-            <h3>Dr. JS Rajkumar</h3>
-            <p class="qualifications">M.S., F.I.C.S., Dip. NB (Surg.), F.R.C.S. (ENG.), F.R.C.S. (EDIN), F.R.C.S. (GLASGOW), F.R.C.S. (IRELAND), F.I.M.S., F.A.I.S., F.A.R.S.M. (LONDON), F.A.E (GASTRO), F.A.C.G. (USA), F.I.C.A. (USA), F.I.A.G.E.S., Dip MIS. (FR).</p>
-
-            <h4>Expertise in</h4>
-            <ul>
-                <li>Laparoscopic (Keyhole) Surgery</li>
-                <li>Robotic-Assisted Surgery</li>
-                <li>Bariatric & Metabolic Surgery</li>
-                <li>Diabetic Surgery</li>
-                <li>Stem Cell Therapy</li>
-                <li>Google Glass-Assisted Surgery</li>
-                <li>Gastrointestinal Disorders</li>
-            </ul>
-
-            <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+            <!-- Doctor 1 -->
+            <div class="doctor-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
+                <img src="/assets/img/doctors-01.png" alt="Dr JS Rajkumar" class="doctor-img">
+                <div class="doctor-info">
+                    <h5>CHAIRMAN & CHIEF ROBOTIC <br> & LAPAROSCOPIC SURGEON</h5>
+                    <h3>Dr. JS Rajkumar</h3>
+                    <p class="qualifications">M.S., F.I.C.S., Dip. NB (Surg.), F.R.C.S. (ENG.), ...</p>
+                    <h4>Expertise in</h4>
+                    <ul>
+                        <li>Laparoscopic (Keyhole) Surgery</li>
+                        <li>Robotic-Assisted Surgery</li>
+                        <li>Bariatric & Metabolic Surgery</li>
+                        <li>Diabetic Surgery</li>
+                        <li>Stem Cell Therapy</li>
+                        <li>Google Glass-Assisted Surgery</li>
+                        <li>Gastrointestinal Disorders</li>
+                    </ul>
+                    <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+                </div>
             </div>
-        </div>
-
-        <!-- Doctor 2 -->
-        <div class="doctor-card">
-            <img src="/assets/img/doctors-02.png" alt="Dr Anirudh Rajkumar" class="doctor-img">
-            <div class="doctor-info">
-            <h5>ADV. ROBOTIC & LAPAROSCOPIC SURGEON</h5>
-            <h3>Dr. Anirudh Rajkumar</h3>
-            <p class="qualifications">MBBS, MS (General Surgery), DNB (Surgery), FMAS, DMAS, MRCS, FIBC (Bariatric)</p>
-
-            <h4>Expertise in</h4>
-            <ul>
-                <li>Advanced Robotic & Laparoscopic Surgeries</li>
-                <li>Complete Laparoscopic Surgeries</li>
-                <li>Abdominal, trauma, and emergency surgeries</li>
-                <li>Soft tissue, skin, and digestive tract procedures</li>
-            </ul>
-
-            <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+        
+            <!-- Doctor 2 -->
+            <div class="doctor-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
+                <img src="/assets/img/doctors-02.png" alt="Dr Anirudh Rajkumar" class="doctor-img">
+                <div class="doctor-info">
+                    <h5>ADV. ROBOTIC & LAPAROSCOPIC SURGEON</h5>
+                    <h3>Dr. Anirudh Rajkumar</h3>
+                    <p class="qualifications">MBBS, MS (General Surgery), DNB (Surgery), FMAS, DMAS, MRCS, FIBC (Bariatric)</p>
+                    <h4>Expertise in</h4>
+                    <ul>
+                        <li>Advanced Robotic & Laparoscopic Surgeries</li>
+                        <li>Complete Laparoscopic Surgeries</li>
+                        <li>Abdominal, trauma, and emergency surgeries</li>
+                        <li>Soft tissue, skin, and digestive tract procedures</li>
+                    </ul>
+                    <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+                </div>
             </div>
-        </div>
-
-        <!-- Doctor 3 -->
-        <div class="doctor-card">
-            <img src="/assets/img/doctors-03.png" alt="Dr K.R. Dharmendra" class="doctor-img">
-            <div class="doctor-info">
-            <h5>ADV. ROBOTIC & LAPAROSCOPIC SURGEON</h5>
-            <h3>Dr. K.R. Dharmendra</h3>
-            <p class="qualifications">MBBS, MS, DNB, FMAS, DMAS, FICRS, FIAGES, FALS (GI), FALS (ROBOTIC), FALS (BARIATRIC), FAGIE</p>
-
-            <h4>Expertise in</h4>
-            <ul>
-                <li>Basic and advanced laparoscopic surgery</li>
-                <li>Varicose vein and hemorrhoid surgery</li>
-                <li>Abdominal wall hernia surgeries</li>
-            </ul>
-
-            <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+        
+            <!-- Doctor 3 -->
+            <div class="doctor-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
+                <img src="/assets/img/doctors-03.png" alt="Dr K.R. Dharmendra" class="doctor-img">
+                <div class="doctor-info">
+                    <h5>ADV. ROBOTIC & LAPAROSCOPIC SURGEON</h5>
+                    <h3>Dr. K.R. Dharmendra</h3>
+                    <p class="qualifications">MBBS, MS, DNB, FMAS, DMAS, FICRS, FIAGES...</p>
+                    <h4>Expertise in</h4>
+                    <ul>
+                        <li>Basic and advanced laparoscopic surgery</li>
+                        <li>Varicose vein and hemorrhoid surgery</li>
+                        <li>Abdominal wall hernia surgeries</li>
+                    </ul>
+                    <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+                </div>
             </div>
-        </div>
-
-        <!-- Doctor 4 -->
-        <div class="doctor-card">
-            <img src="/assets/img/doctors-04.png" alt="Prof. Ilamparuthi Chennakrishnan" class="doctor-img">
-            <div class="doctor-info">
-            <h5>GENITO-URINARY SURGEON</h5>
-            <h3>Prof. Ilamparuthi Chennakrishnan</h3>
-            <p class="qualifications">MBBS, MS, MCh (Uro), DNB (Uro), F.I.C.S.</p>
-
-            <h4>Expertise in</h4>
-            <ul>
-                <li>Urinary tract disorder treatment</li>
-                <li>Kidney, bladder, prostate surgeries</li>
-                <li>Minimally invasive & robotic procedures</li>
-                <li>Kidney stone removal (laser, shock wave)</li>
-                <li>Male infertility & reproductive health</li>
-            </ul>
-
-            <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+        
+            <!-- Doctor 4 -->
+            <div class="doctor-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="700">
+                <img src="/assets/img/doctors-04.png" alt="Prof. Ilamparuthi Chennakrishnan" class="doctor-img">
+                <div class="doctor-info">
+                    <h5>GENITO-URINARY SURGEON</h5>
+                    <h3>Prof. Ilamparuthi Chennakrishnan</h3>
+                    <p class="qualifications">MBBS, MS, MCh (Uro), DNB (Uro), F.I.C.S.</p>
+                    <h4>Expertise in</h4>
+                    <ul>
+                        <li>Urinary tract disorder treatment</li>
+                        <li>Kidney, bladder, prostate surgeries</li>
+                        <li>Minimally invasive & robotic procedures</li>
+                        <li>Kidney stone removal (laser, shock wave)</li>
+                        <li>Male infertility & reproductive health</li>
+                    </ul>
+                    <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+                </div>
             </div>
+            
+            <div class="doctor-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
+                <img src="/assets/img/doctors-01.png" alt="Dr JS Rajkumar" class="doctor-img">
+                <div class="doctor-info">
+                    <h5>CHAIRMAN & CHIEF ROBOTIC <br> & LAPAROSCOPIC SURGEON</h5>
+                    <h3>Dr. JS Rajkumar</h3>
+                    <p class="qualifications">M.S., F.I.C.S., Dip. NB (Surg.), F.R.C.S. (ENG.), ...</p>
+                    <h4>Expertise in</h4>
+                    <ul>
+                        <li>Laparoscopic (Keyhole) Surgery</li>
+                        <li>Robotic-Assisted Surgery</li>
+                        <li>Bariatric & Metabolic Surgery</li>
+                        <li>Diabetic Surgery</li>
+                        <li>Stem Cell Therapy</li>
+                        <li>Google Glass-Assisted Surgery</li>
+                        <li>Gastrointestinal Disorders</li>
+                    </ul>
+                    <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+            
+            <div class="doctor-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
+                <img src="/assets/img/doctors-02.png" alt="Dr Anirudh Rajkumar" class="doctor-img">
+                <div class="doctor-info">
+                    <h5>ADV. ROBOTIC & LAPAROSCOPIC SURGEON</h5>
+                    <h3>Dr. Anirudh Rajkumar</h3>
+                    <p class="qualifications">MBBS, MS (General Surgery), DNB (Surgery), FMAS, DMAS, MRCS, FIBC (Bariatric)</p>
+                    <h4>Expertise in</h4>
+                    <ul>
+                        <li>Advanced Robotic & Laparoscopic Surgeries</li>
+                        <li>Complete Laparoscopic Surgeries</li>
+                        <li>Abdominal, trauma, and emergency surgeries</li>
+                        <li>Soft tissue, skin, and digestive tract procedures</li>
+                    </ul>
+                    <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+        
+            <!-- Doctor 3 -->
+            <div class="doctor-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
+                <img src="/assets/img/doctors-03.png" alt="Dr K.R. Dharmendra" class="doctor-img">
+                <div class="doctor-info">
+                    <h5>ADV. ROBOTIC & LAPAROSCOPIC SURGEON</h5>
+                    <h3>Dr. K.R. Dharmendra</h3>
+                    <p class="qualifications">MBBS, MS, DNB, FMAS, DMAS, FICRS, FIAGES...</p>
+                    <h4>Expertise in</h4>
+                    <ul>
+                        <li>Basic and advanced laparoscopic surgery</li>
+                        <li>Varicose vein and hemorrhoid surgery</li>
+                        <li>Abdominal wall hernia surgeries</li>
+                    </ul>
+                    <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+        
+            <!-- Doctor 4 -->
+            <div class="doctor-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="700">
+                <img src="/assets/img/doctors-04.png" alt="Prof. Ilamparuthi Chennakrishnan" class="doctor-img">
+                <div class="doctor-info">
+                    <h5>GENITO-URINARY SURGEON</h5>
+                    <h3>Prof. Ilamparuthi Chennakrishnan</h3>
+                    <p class="qualifications">MBBS, MS, MCh (Uro), DNB (Uro), F.I.C.S.</p>
+                    <h4>Expertise in</h4>
+                    <ul>
+                        <li>Urinary tract disorder treatment</li>
+                        <li>Kidney, bladder, prostate surgeries</li>
+                        <li>Minimally invasive & robotic procedures</li>
+                        <li>Kidney stone removal (laser, shock wave)</li>
+                        <li>Male infertility & reproductive health</li>
+                    </ul>
+                    <a href="#" class="book-appointment-btn">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+        
         </div>
 
-        </div>
-
-        <div class="row mt-5">
+        <div class="row pt-5">
             <div class="col-12">
-                <a href="#" class="about-btn">MORE DOCTORS</a>
+                <a href="#" class="about-btn" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">MORE DOCTORS</a>
             </div>
         </div>
     </section>
 
     <div class="health-section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6"></div>
                 <div class="col-lg-6 row">
                     <div class="col-12">
-                        <h2 class="section-title">
+                        <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                             Healing Without Scars
                         </h2>
-                        <p class="section-subtitle">Recovering With Confidence</p>
+                        <p class="section-subtitle" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">Recovering With Confidence</p>
                     </div>
                     <div class="col-12">
-                        <p class="mb-4">Scarless surgery is a medical revolution, where procedures are performed through the tiniest incisions—often hidden within natural folds of the body—so scars fade away in just a few days. At Lifeline, our surgeons are leaders in minimally invasive surgery, ensuring patients recover with dignity, confidence, and peace of mind.</p>
-                        <p>What truly sets us apart is our innovation in single-port surgery through the belly button, making it possible to perform complex procedures with virtually no visible scar. Combined with reduced blood loss, shorter hospital stays, and faster healing, this approach represents the future of surgery. At Lifeline, every step is powered by advanced technology and guided by compassion, so you can focus on what truly matters—your recovery and your life.</p>
+                        <p class="mb-4" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">Scarless surgery is a medical revolution, where procedures are performed through the tiniest incisions—often hidden within natural folds of the body—so scars fade away in just a few days. At Lifeline, our surgeons are leaders in minimally invasive surgery, ensuring patients recover with dignity, confidence, and peace of mind.</p>
+                        <p data-sal="slide-up" data-sal-duration="1000" data-sal-delay="700">What truly sets us apart is our innovation in single-port surgery through the belly button, making it possible to perform complex procedures with virtually no visible scar. Combined with reduced blood loss, shorter hospital stays, and faster healing, this approach represents the future of surgery. At Lifeline, every step is powered by advanced technology and guided by compassion, so you can focus on what truly matters—your recovery and your life.</p>
                     </div>
                     <div class="col-12 text-center mt-5">
-                        <a href="#" class="about-btn">Read More</a>
+                        <a href="#" class="about-btn" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">Read More</a>
                     </div>
                 </div>
             </div>
@@ -383,13 +481,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-5">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         Check Early, Stay Healthy
                     </h2>
-                    <p class="section-subtitle">Comprehensive Health check-ups</p>
+                    <p class="section-subtitle" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">Comprehensive Health check-ups</p>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/health-icon-01.png" alt="health-icon-01">
                         </div>
@@ -397,7 +495,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/health-icon-02.png" alt="health-icon-02">
                         </div>
@@ -405,7 +503,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/health-icon-01.png" alt="health-icon-01">
                         </div>
@@ -413,7 +511,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="progress-card">
+                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="700">
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/health-icon-04.png" alt="health-icon-04">
                         </div>
@@ -428,18 +526,18 @@
     </section>
 
     <section class="testimonial-section">
-        <div class="container-fluid">
+        <div class="container position-relative">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         As told by our Patients
                     </h2>
-                    <p class="section-subtitle">Patients Corner</p>
+                    <p class="section-subtitle" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">Patients Corner</p>
                 </div>
                 <div class="col-12">
                     <div class="testimonial-wrapper">
                         <div class="testimonial-slider">
-                            <div class="testimonial-card">
+                            <div class="testimonial-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                             <h3>Gowthami VM</h3>
                                 <div class="stars">★★★★★</div>
                                 <p>
@@ -447,7 +545,7 @@
                                 </p>
                             </div>
 
-                            <div class="testimonial-card">
+                            <div class="testimonial-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                                 <h3>Mageshbabu R</h3>
                                 <div class="stars">★★★★★</div>
                                 <p>
@@ -460,7 +558,7 @@
                                 </p>
                             </div>
 
-                            <div class="testimonial-card">
+                            <div class="testimonial-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
                                 <h3>Uma Suresh</h3>
                                 <div class="stars">★★★★★</div>
                                 <p>
@@ -492,7 +590,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-5">
-                    <h2 class="section-title">
+                    <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         Latest News & Events
                     </h2>
                 </div>
@@ -501,48 +599,48 @@
     </section>
 
     <section class="progress-section latest-news-second-section py-5">
-        <div class="container">
+        <div class="container position-relative">
             <div class="row">
                 <div class="col-12 row mb-3 latest-news-overall-wrapper">
                     <div class="col-lg-3">
-                        <div class="single-news-wrapper">
+                        <div class="single-news-wrapper" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                             <img src="/assets/img/latest-news-01.png" alt="latest-news-01">
                             <div class="single-news-content ps-5">
                                 <p>The Founders Day <br> Celebrating 28 Years of <br> Lifeline Hospitals</p>
-                                <span>25th Jan 2025</span>
+                                <span><i>25th Jan 2025</i></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-news-wrapper">
+                        <div class="single-news-wrapper" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                             <img src="/assets/img/latest-news-02.png" alt="latest-news-02">
                             <div class="single-news-content ps-5">
                                 <p>Blood Donation Camp <br> at Lifeline Hospitals</p>
-                                <span>13th Feb 2025</span>
+                                <span><i>13th Feb 2025</i></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-news-wrapper">
+                        <div class="single-news-wrapper" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
                             <img src="/assets/img/latest-news-03.png" alt="latest-news-03">
                             <div class="single-news-content ps-5">
                                 <p>Dr. Anirudh Rajkumar <br> Best Obesity & Diabetes <br> Reversible Surgeon Award</p>
-                                <span>6th March 2025</span>
+                                <span><i>6th March 2025</i></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="single-news-wrapper">
+                        <div class="single-news-wrapper" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="700">
                             <img src="/assets/img/latest-news-04.png" alt="latest-news-04">
                             <div class="single-news-content ps-5">
                                 <p>Women's Day <br> Celebration at <br> Lifeline Hospitals</p>
-                                <span>8th March 2025</span>
+                                <span><i>8th March 2025</i></span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 text-center mt-5 ln-btn-wrapper">
-                    <a href="#" class="about-btn">More News & Events</a>
+                    <a href="#" class="about-btn" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">More News & Events</a>
                 </div>
             </div>
         </div>
@@ -552,22 +650,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-5">
-                    <h2 class="section-title">Healing Begins with Knowledge</h2>
-                    <p class="section-subtitle">Expert Insights from Our Doctors</p>
+                    <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">Healing Begins with Knowledge</h2>
+                    <p class="section-subtitle" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">Expert Insights from Our Doctors</p>
                 </div>
                 <div class="col-12">
                     <div class="videos-slider">
-                        <div class="videos-slide">
+                        <div class="videos-slide" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                             <iframe src="https://www.youtube.com/embed/U78T7297RHo?si=VJ1mRx5ptuusLsSz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <h3>Dr. JS Rajkumar</h3>
                             <p>Chairman & Chief Surgeon</p>
                         </div>
-                        <div class="videos-slide">
+                        <div class="videos-slide" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                             <iframe src="https://www.youtube.com/embed/nmo9xUvaDPU?si=geVNyL_Mhp8RAji3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <h3>Dr. Anirudh Rajkumar</h3>
                             <p>Advanced Robotic & Laparoscopic Surgeon</p>
                         </div>
-                        <div class="videos-slide">
+                        <div class="videos-slide" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
                             <iframe src="https://www.youtube.com/embed/DD8Z-KzppEw?si=rmkgIZHeIvJKaGWR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <h3>Dr. K. P. Dinakaran</h3>
                             <p>Sr. CONSULTANT DIABETOLOGIST</p>
@@ -585,7 +683,7 @@
                     </div>
                 </div>
                 <div class="col-12 text-center mt-5">
-                    <a href="#" class="about-btn">More Videos</a>
+                    <a href="#" class="about-btn" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">More Videos</a>
                 </div>
             </div>
         </div>
@@ -595,14 +693,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-5">
-                    <h2 class="section-title">Lifeline Blogs</h2>
-                    <p class="section-subtitle">Check out our latest scoops on healthcare</p>
+                    <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">Lifeline Blogs</h2>
+                    <p class="section-subtitle" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">Check out our latest scoops on healthcare</p>
                 </div>
             </div>
             <div class="blog-section">
                 <div class="featured-blog">
-                    <img src="/assets/img/blog-featured-img.png" alt="Featured Blog">
-                    <div class="featured-overlay">
+                    <img data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100" src="/assets/img/blog-featured-img.png" alt="Featured Blog">
+                    <div class="featured-overlay" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                         <div>
                             <h2>India’s Weighty Future:</h2>
                             <p>A Wake-Up Call on World Obesity Day</p>
@@ -616,34 +714,34 @@
 
                 <!-- Side Blogs -->
                 <div class="side-blogs">
-                    <div class="side-blog">
+                    <div class="side-blog" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         <img src="/assets/img/blog-list-img.png" alt="Blog">
                         <div class="side-blog-content">
                             <h3>Your Body, Your Power: <br> Accelerating Women's Health Action</h3>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span>By Dr. JS Rajkumar</span>
+                            <div class="d-flex  justify-content-left align-items-center" style="gap:86px;">
+                                <span><i>By Dr. JS Rajkumar</i></span>
                                 <button class="open-btn">OPEN</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="side-blog">
+                    <div class="side-blog" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                         <img src="/assets/img/blog-list-img.png" alt="Blog">
                         <div class="side-blog-content">
                             <h3>Your Body, Your Power: <br> Accelerating Women's Health Action</h3>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span>By Dr. JS Rajkumar</span>
+                            <div class="d-flex  justify-content-left align-items-center" style="gap:86px;">
+                                <span><i>By Dr. JS Rajkumar</i></span>
                                 <button class="open-btn">OPEN</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="side-blog">
+                    <div class="side-blog" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
                         <img src="/assets/img/blog-list-img.png" alt="Blog">
                         <div class="side-blog-content">
                             <h3>Your Body, Your Power: <br> Accelerating Women's Health Action</h3>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span>By Dr. JS Rajkumar</span>
+                            <div class="d-flex  justify-content-left align-items-center" style="gap:86px;">
+                                <span><i>By Dr. JS Rajkumar</i></span>
                                 <button class="open-btn">OPEN</button>
                             </div>
                         </div>
@@ -652,7 +750,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center mt-5">
-                    <a href="#" class="about-btn">Read More Articles</a>
+                    <a href="#" class="about-btn" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">Read More Articles</a>
                 </div>
             </div>
         </div>
@@ -662,15 +760,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-4">
-                    <h2 class="section-title">Frequently asked questions</h2>
+                    <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">Frequently asked questions</h2>
                 </div>
                 <div class="col-12">
                     <div class="faq-section-wrapper">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <div class="accordion-item">
+                            <div class="accordion-item" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button px-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        How can I get an appointment with Dr. J.S. Rajkumar?
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        How can I get an appointment with Dr. J.S. Rajkumar? 
                                     </button>
                                 </h2>
                                 <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
@@ -680,9 +778,9 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                        Does Dr. J.S. Rajkumar consult in Hyderabad?
+                                <h2 class="accordion-header" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Does Dr. J.S. Rajkumar consult in Hyderabad? 
                                     </button>
                                 </h2>
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -692,9 +790,9 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                        What is Lifeline Hospital most renowned for?
+                                <h2 class="accordion-header" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        What is Lifeline Hospital most renowned for? 
                                     </button>
                                 </h2>
                                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -703,10 +801,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
+                            <div class="accordion-item" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="400">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                        What are the visiting hours at Lifeline Hospital?
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                        What are the visiting hours at Lifeline Hospital? 
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -715,10 +813,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item">
+                            <div class="accordion-item" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button px-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                                        Does Lifeline Hospital offer emergency services?
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                        Does Lifeline Hospital offer emergency services? 
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -733,8 +831,261 @@
             </div>
         </div>
     </section>
+    
+    <section class="map-section">
+        <iframe data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124362.63779728182!2d80.08127299726561!3d13.078105699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52667fb51df4c1%3A0xda54eb8cae181334!2sLifeline%20Multispeciality%20Hospitals!5e0!3m2!1sen!2sin!4v1760338324185!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+    
+    <section class="contact-section ">
+        <div class="container">
+        <div class="row ">
+           <div class="col-md-3">
+                <div class="logo" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
+                    <img src="./assets/img/logo-lifeline.webp" alt="Lifeline Hospital Logo">
+                </div>
+                <p data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
+                    Lifeline Hospital redefines corporate healthcare with world-class expertise and global benchmarks in
+                    medical excellence, delivering advanced, patient-first care with precision and trust.
+                    Experience the future of healthcare, where technology meets compassion.
+                </p>
+            </div>
 
+          
+            <div class="col-md-3 mt-5 ps-5" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
+                <h5>CONTACT US</h5>
+             <div class="contact-info mb-3">
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fa-solid fa-location-dot me-2"></i>
+                        <strong>47/3, New Avadi Road, Kilpauk, <br> Chennai, Tamil Nadu 600010.</strong>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa-solid fa-envelope me-2"></i>
+                        <a href="mailto:info@lifelinehospital.com"><strong>info@lifelinehospital.com</strong></a>
+                    </li>
+              <li class="mb-2">
+                    <i class="fa-solid fa-phone me-2"></i>
+                    <div class="d-flex flex-column contact-number">
+                        <a href="tel:04442949495"><strong>044 4294 9495</strong></a>
+                        <a href="tel:9677222333"><strong>96 77 222 333</strong></a>
+                    </div>
+                </li>
+                </ul>
+               
+            </div>
+        
+            </div>
+            <div class="col-md-2 mt-5" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
+                <h5>QUICK LINKS</h5>
+               <ul class="footer-links  gap-3">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Book an Appointment</a></li>
+                  <li><a href="#">Find a Doctor</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+
+            </div>
+          
+            <div class="col-md-4">
+                <div class="appointment-box" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="400">
+                    <h3 class="form-header">Book an Appointment</h3>
+                    <div class="p-4">
+                        <form>
+                            <input type="text" class="form-control" placeholder="Name:" required>
+                            <input type="text" class="form-control" placeholder="Phone No:" required>
+                            <input type="date" class="form-control" placeholder="Date:" required>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="consentCheck" checked>
+                                <label class="form-check-label" for="consentCheck">
+                                     <i class="fa-solid fa-circle-check me-1"></i>
+                                    I consent to get contacted from Lifeline Multispeciality Hospitals.
+                                </label>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="about-btn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"> </div>
+            
+            <div class="col-md-5"> 
+                 <div class="p-0 m-0">
+                    <div class="social-icons  d-flex align-items-center justify-content-center" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
+                        <span class="follow-us me-3">FOLLOW US:</span>
+                        <a href="#" class="me-2"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                            </div>
+                       
+ 
+        </div>
+        </div>
+    </section>
+    
+                   <section class="footer-section">
+                       <div class="container">
+                          <div class="row">
+                            
+                            <!-- Column 1 -->
+                            <div class="col-md-3">
+                              <ul class="footer-list">
+                                <h3>Scarless Surgery</h3>
+                                <li><a href="#">Gallbladder Removal</a></li>
+                                <li><a href="#">Appendix Removal</a></li>
+                                <li><a href="#">Hernia Repair</a></li>
+                                <li><a href="#">Fundoplication</a></li>
+                                <li><a href="#">Bariatric Surgeries</a></li>
+                                <li><a href="#">Colorectal Surgeries</a></li>
+                                <li><a href="#">Small Bowel Surgery</a></li>
+                                <li><a href="#">Liver Surgery</a></li>
+                                <li><a href="#">Pancreatic Surgery</a></li>
+                                <li><a href="#">Spleen Removal</a></li>
+                                <li><a href="#">Adrenal Gland Removal</a></li>
+                                <li><a href="#">Nephrectomy</a></li>
+                                <li><a href="#">Urological Procedures</a></li>
+                                <li><a href="#">Gynecological Surgeries</a></li>
+                                <li><a href="#">Oncological Surgeries</a></li>
+                                <li><a href="#">Thoracic Surgeries</a></li>
+                              </ul>
+                            </div>
+                            
+                            <!-- Column 2 -->
+                            <div class="col-md-3">
+                              <ul class="footer-list">
+                                <h3>Bariatric / Metabolic Surgery</h3>
+                                <li><a href="#">Sleeve Gastrectomy</a></li>
+                                <li><a href="#">Roux-en-Y Gastric Bypass</a></li>
+                                <li><a href="#">One Anastomosis Gastric Bypass</a></li>
+                                <li><a href="#">Lap Band Surgery</a></li>
+                                <li><a href="#">Biliopancreatic Diversion with</a></li>
+                                <li><a href="#">Duodenal Switch (BPD/DS)</a></li>
+                                <li><a href="#">Revision Bariatric Surgery</a></li>
+                                <li><a href="#">Intragastric Balloon</a></li>
+                                <li><a href="#">Endoscopic Sleeve Gastroplasty – ESG</a></li>
+                              </ul>
+                            </div>
+                            
+                            <!-- Column 3 -->
+                            <div class="col-md-3">
+                              <ul class="footer-list">
+                                <h3>Surgical Gastroentrology</h3>
+                                <li><a href="#">Upper GI Surgeries</a></li>
+                                <li><a href="#">Esophagectomy</a></li>
+                                <li><a href="#">GERD / Acid reflux surgery</a></li>
+                                <li><a href="#">Total Gastrectomy</a></li>
+                                <li><a href="#">Heller’s Myotomy</a></li>
+                                
+                                <li style="font-weight: bold; text-transform: uppercase;color:white;">
+                                  Hepato-Pancreato-Biliary (HPB)
+                                </li>
+                                
+                                <li><a href="#">Hepatectomy</a></li>
+                                <li><a href="#">Liver Cyst Removal</a></li>
+                                <li><a href="#">Cholecystectomy</a></li>
+                                <li><a href="#">Choledochal Cyst Excision</a></li>
+                                <li><a href="#">Biliary Reconstruction</a></li>
+                                <li><a href="#">Whipple’s Procedure</a></li>
+                                <li><a href="#">Distal Pancreatectomy Cystogastrostomy</a></li>
+                                <li><a href="#">Splenectomy</a></li>
+                                
+                                <li><a href="#">Colorectal Surgeries</a></li>
+                                <li><a href="#">Colectomy</a></li>
+                                <li><a href="#">Low Anterior Resection</a></li>
+                                <li><a href="#">Abdominoperineal Resection</a></li>
+                                <li><a href="#">Rectopexy</a></li>
+                                <li><a href="#">Ulcerative Colitis</a></li>
+                                <li><a href="#">Crohn’s Disease</a></li>
+                              </ul>
+                            </div>
+                            
+                            <!-- Column 4 -->
+                            <div class="col-md-3">
+                              <ul class="footer-list">
+                                <h3>Surgical Gastroentrology</h3>
+                                <li><a href="#">Upper GI Surgeries</a></li>
+                                <li><a href="#">Esophagectomy</a></li>
+                                <li><a href="#">GERD / Acid reflux surgery</a></li>
+                                <li><a href="#">Total Gastrectomy</a></li>
+                                <li><a href="#">Heller’s Myotomy</a></li>
+                                
+                                <li style="font-weight: bold; text-transform: uppercase;color:white;">
+                                  Hepato-Pancreato-Biliary (HPB)
+                                </li>
+                                
+                                <li><a href="#">Hepatectomy</a></li>
+                                <li><a href="#">Liver Cyst Removal</a></li>
+                                <li><a href="#">Cholecystectomy</a></li>
+                                <li><a href="#">Choledochal Cyst Excision</a></li>
+                                <li><a href="#">Biliary Reconstruction</a></li>
+                                <li><a href="#">Whipple’s Procedure</a></li>
+                                <li><a href="#">Distal Pancreatectomy Cystogastrostomy</a></li>
+                                <li><a href="#">Splenectomy</a></li>
+                                
+                                <li><a href="#">Colorectal Surgeries</a></li>
+                                <li><a href="#">Colectomy</a></li>
+                                <li><a href="#">Low Anterior Resection</a></li>
+                                <li><a href="#">Abdominoperineal Resection</a></li>
+                                <li><a href="#">Rectopexy</a></li>
+                                <li><a href="#">Ulcerative Colitis</a></li>
+                                <li><a href="#">Crohn’s Disease</a></li>
+                              </ul>
+                            </div>
+                            
+                          </div>
+                          
+                          <!-- Bottom Copyright -->
+                          <div class="footer-bottom">
+                            <p class="copyright">
+                              Copyright © 2025 Lifeline Multi Speciality Hospitals Private Limited. All Rights Reserved.
+                            </p>
+                          </div>
+                          
+                        </div>
+                </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        sal({
+          threshold: 0.2,
+          once: true
+        });
+    });
+    
+    document.querySelectorAll('.footer-list').forEach(list => {
+      let delay = 50;
+      list.querySelectorAll('li').forEach(li => {
+        li.setAttribute('data-sal', 'slide-up');
+        li.setAttribute('data-sal-duration', '1000');
+        li.setAttribute('data-sal-delay', delay);
+        delay += 50;
+      });
+    });
+    // sal();
+
+    
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            type: 'video',
+            source: 'youtube',
+            autoplayVideos: true,
+        });
+        
         $(".testimonial-slider").slick({
             dots: true,
             infinite: true,
@@ -744,6 +1095,8 @@
             autoplay: true,
             autoplaySpeed: 4000,
             arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
             responsive: [
                 {
                 breakpoint: 992,
@@ -769,6 +1122,8 @@
             autoplay: true,
             autoplaySpeed: 4000,
             arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
             responsive: [
                 {
                 breakpoint: 992,
@@ -781,6 +1136,33 @@
                 settings: {
                     slidesToShow: 1,
                 },
+                },
+            ],
+        });
+        
+        $(".doctors-slider").slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    },
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    },
                 },
             ],
         });
