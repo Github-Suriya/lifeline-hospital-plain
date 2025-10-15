@@ -37,28 +37,76 @@
 <body>
 
     <header class="header">
-        <div class="container">
-            <div class="inner-header">
-                <div class="logo" data-sal="fade" data-sal-duration="1000">
-                    <img src="/assets/img/logo-lifeline.webp" alt="Lifeline Logo" />
-                </div>
-        
-                <nav class="nav">
-                <ul>
-                    <li data-sal="fade" data-sal-duration="1000"><a href="#" class="active">SPECIALTIES  <i class="fa-solid fa-chevron-down text-dark"></i>  </a></li>
-                    <li data-sal="fade" data-sal-duration="1000" data-sal-delay="100"><a href="#">BARIATRICS / METABOLICS</a></li>
-                    <li data-sal="fade" data-sal-duration="1000" data-sal-delay="200"><a href="#">HEALTH PACKAGES</a></li>
-                </ul>
-                </nav>
-        
-                <div class="header-buttons">
-                <a data-sal="fade" data-sal-duration="1000" data-sal-delay="300" href="#" class="theme-btn pink">APPOINTMENTS</a>
-                <a data-sal="fade" data-sal-duration="1000" data-sal-delay="400" href="#" class="theme-btn red">
-                    <i class="fa-solid fa-truck-medical"></i> <span class="emergency">EMERGENCY</span>
+      <div class="container">
+        <div class="inner-header">
+          <!-- Logo -->
+          <div class="logo" data-sal="fade" data-sal-duration="1000">
+            <img src="/assets/img/logo-lifeline.webp" alt="Lifeline Logo" />
+          </div>
+    
+          <!-- Hamburger -->
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    
+          <!-- Navigation -->
+          <nav class="nav" id="nav-menu">
+            <ul>
+              <li class="dropdown" data-sal="fade" data-sal-duration="1000">
+                <a href="#" class="active">
+                  SPECIALTIES <i class="fa-solid fa-chevron-down text-dark"></i>
                 </a>
+    
+                <!-- Mega Menu -->
+                <div class="mega-menu">
+                  <div class="mega-column">
+                    <h4>General Surgery</h4>
+                    <ul>
+                      <li><a href="#">Laparoscopic Surgery</a></li>
+                      <li><a href="#">Hernia Treatment</a></li>
+                      <li><a href="#">Gallbladder Removal</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-column">
+                    <h4>Robotic Surgery</h4>
+                    <ul>
+                      <li><a href="#">Urology</a></li>
+                      <li><a href="#">Gynecology</a></li>
+                      <li><a href="#">Thoracic</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-column">
+                    <h4>Other Specialties</h4>
+                    <ul>
+                      <li><a href="#">ENT</a></li>
+                      <li><a href="#">Orthopedics</a></li>
+                      <li><a href="#">Cardiology</a></li>
+                    </ul>
+                  </div>
                 </div>
-            </div>
+              </li>
+    
+              <li data-sal="fade" data-sal-duration="1000" data-sal-delay="100">
+                <a href="#">BARIATRICS / METABOLICS</a>
+              </li>
+    
+              <li data-sal="fade" data-sal-duration="1000" data-sal-delay="200">
+                <a href="#">HEALTH PACKAGES</a>
+              </li>
+            </ul>
+          </nav>
+    
+          <!-- Header Buttons -->
+          <div class="header-buttons">
+            <a data-sal="fade" data-sal-duration="1000" data-sal-delay="300" href="#" class="theme-btn pink">APPOINTMENTS</a>
+            <a data-sal="fade" data-sal-duration="1000" data-sal-delay="400" href="#" class="theme-btn red">
+              <i class="fa-solid fa-truck-medical"></i> <span class="emergency">EMERGENCY</span>
+            </a>
+          </div>
         </div>
+      </div>
     </header>
     
     <section class="banner-section" data-sal="fade" data-sal-duration="1000">
@@ -101,12 +149,12 @@
     <section class="about-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 py-lg-0 py-3 d-flex justify-content-lg-start justify-content-center">
                     <div class="about-image" data-sal="slide-right" data-sal-duration="1000" data-sal-delay="100">
                         <img src="/assets/img/about_img.webp" alt="about">
                     </div>
                 </div>
-                <div class="col-lg-6 d-flex align-items-center">
+                <div class="col-lg-6 py-lg-0 py-3 d-flex align-items-center justify-content-center">
                     <div class="about-content" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="200">
                         <p>Dr. J S Rajkumar, fondly known as Dr. JSR, was a studious and an enthusiastic medical student, who won 32 Gold medals and the Johnston best outgoing student award at the Madras Medical College . He received four medical specializations from the Royal College of Surgeons in the United Kingdom. </p>
                         <a href="#" class="about-btn">Read More</a>
@@ -178,7 +226,7 @@
                 <div class="col-lg-5 pt-lg-5 pt-0">
                     <div class="care-highlights" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <div class="single-care-highlights">
                                     <div class="icon">
                                         <img src="/assets/img/care-icon-01.png" alt="care-icon-01">
@@ -186,7 +234,7 @@
                                     <p class="single-care-title">Significant Weight Loss</p>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <div class="single-care-highlights">
                                     <div class="icon">
                                         <img src="/assets/img/care-icon-04.png" alt="care-icon-04">
@@ -194,7 +242,7 @@
                                     <p class="single-care-title">Boosted Confidence</p>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <div class="single-care-highlights">
                                     <div class="icon">
                                         <img src="/assets/img/care-icon-02.png" alt="care-icon-02">
@@ -202,7 +250,7 @@
                                     <p class="single-care-title">Improved Overall Health</p>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <div class="single-care-highlights">
                                     <div class="icon">
                                         <img src="/assets/img/care-icon-02.png" alt="care-icon-02">
@@ -210,7 +258,7 @@
                                     <p class="single-care-title">Improved Heart Health</p>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <div class="single-care-highlights">
                                     <div class="icon">
                                         <img src="/assets/img/care-icon-03.png" alt="care-icon-03">
@@ -218,7 +266,7 @@
                                     <p class="single-care-title">Controls Diabetes & Hypertension</p>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <div class="single-care-highlights">
                                     <div class="icon">
                                         <img src="/assets/img/care-icon-06.png" alt="care-icon-06">
@@ -1166,6 +1214,25 @@
                 },
             ],
         });
+    </script>
+    
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      const dropdown = document.querySelector('.dropdown');
+    
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
+    
+      // For mobile dropdown toggle
+      dropdown.addEventListener('click', (e) => {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        }
+      });
     </script>
 
 </body>
