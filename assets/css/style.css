@@ -54,11 +54,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
+  padding: 10px 0;
 }
 
 .logo img {
-  width: 210px;
+  width: 260px;
 }
 
 /* Navigation */
@@ -77,7 +77,7 @@ body {
   text-decoration: none;
   color: #222;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 16px;
   transition: color 0.3s ease;
 }
 
@@ -299,7 +299,7 @@ body {
 }
 
 .about-section .about-content {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -364,6 +364,15 @@ body {
     font-weight: 900;
 }
 
+.progress-card .progress-title a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.progress-card .progress-title a:hover {
+  color: var(--primary-color);
+}
+
 .progress-card .progress-subtitle {
     color: var(--text-color);
     font-size: 20px;
@@ -413,15 +422,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .care-highlights .single-care-highlights .icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 1.5px solid var(--gray-color);
-    padding: 5px;
+    padding: 8px;
 }
 
 .care-highlights .single-care-highlights .icon img {
@@ -433,10 +442,11 @@ body {
 
 .care-highlights .single-care-highlights .single-care-title {
     font-family: var(--primary-font);
+    font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
-    width: 80%;
+    width: 70%;
     font-weight:900;
 }
 
@@ -606,6 +616,14 @@ body {
   text-align: center;
 }
 
+.health-icon-section .progress-card .progress-title a {
+  color: inherit;
+}
+
+.health-icon-section .progress-card .progress-title a:hover {
+  color: var(--primary-color);
+}
+
 /* testimonial section */
 
 .testimonial-section {
@@ -665,7 +683,7 @@ body {
 
 /* Slick Dots */
  .slick-dots {
-  bottom: -100px !important;
+  bottom: -80px !important;
  }
 
 .slick-dots li button:before {
@@ -675,6 +693,10 @@ body {
 
 .slick-dots li.slick-active button:before {
   color: #111;
+}
+
+.testimonial-slider .slick-dots li button:before {
+  font-size: 12px;
 }
 
 /* Custom Arrows */
@@ -790,6 +812,12 @@ body {
   font-size: 12px;
 }
 
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* blog section */
 
 .blog-section {
@@ -856,10 +884,12 @@ body {
     border-radius: 9px;
     text-decoration: none;
     font-weight: 600;
+    transition: all 0.3s;
 }
 
 .featured-overlay .btn:hover {
-  background: #222;
+  background: #fff;
+  color: #000;
 }
 
 /* ===== Right Small Blogs ===== */
@@ -867,7 +897,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 2rem;
 }
 
 .side-blog {
@@ -876,12 +905,17 @@ body {
   gap: 36px;
   background: #fff;
   border-radius: 4px;
-  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  padding: 13px 8px;
+}
+
+.side-blogs .side-blog:nth-last-of-type(1) {
+  border-bottom: none;
 }
 
 .side-blog img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 4px;
   object-fit: cover;
   border: 1px solid #545454;
@@ -892,14 +926,24 @@ body {
 }
 
 .side-blog-content h3 {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   color: #111;
   margin: 0;
 }
 
+.side-blog-content h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-blog-content h3 span {
+  font-size: 20px;
+  color: #666;
+}
+
 .side-blog-content span {
-  font-size: 13px;
+  font-size: 16px;
   color: #666;
   display: block;
   margin: 4px 0 6px;
@@ -909,7 +953,7 @@ body {
   background: transparent;
   border: 1px solid #333;
   color: #383e48;
-  font-size: 10px;
+  font-size: 14px;
   padding: 1px 15px;
   border-radius: 10px;
   cursor: pointer;
@@ -1006,6 +1050,7 @@ body {
 
     .contact-number a {
       font-size: 20px;
+      font-weight: 800;
     }
 
     .appointment-box {
@@ -1188,7 +1233,7 @@ content: "";
 .video-wrapper {
   position: relative;
   width: 100%;
-  height: 550px; 
+  height: 700px; 
   overflow: hidden;
 }
 
@@ -1248,6 +1293,10 @@ content: "";
 #accordionFlushExample .accordion-body {
     font-size: 18px;
     font-weight:600;
+}
+
+#accordionFlushExample .accordion-button {
+  font-weight: 800;
 }
 
 #accordionFlushExample .accordion-button::after {

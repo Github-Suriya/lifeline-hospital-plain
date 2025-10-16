@@ -118,7 +118,7 @@
           <!-- Header Buttons -->
           <div class="header-buttons">
             <a data-sal="fade" data-sal-duration="1000" data-sal-delay="300" href="#" class="theme-btn pink">APPOINTMENTS</a>
-            <a data-sal="fade" data-sal-duration="1000" data-sal-delay="400" href="#" class="theme-btn red">
+            <a data-sal="fade" data-sal-duration="1000" data-sal-delay="400" href="#" class="theme-btn red p-0">
               <i class="fa-solid fa-truck-medical"></i> <span class="emergency">EMERGENCY</span>
             </a>
           </div>
@@ -127,7 +127,11 @@
     </header>
     
     <section class="banner-section" data-sal="fade" data-sal-duration="1000">
-        <img src="/assets/img/banner.png" alt="banner">
+        <div class="banner-carousel">
+            <img src="/assets/img/banner.png" alt="banner">
+            <img src="/assets/img/banner.png" alt="banner">
+            <img src="/assets/img/banner.png" alt="banner">
+        </div>
     </section>
     
     <div class="container">
@@ -147,20 +151,17 @@
     </div>
     
     <section class="video-section" data-sal="fade" data-sal-duration="1000">
-      <div class="container-fluid">
-        <div class="video-wrapper">
-          <a href="https://www.youtube.com/watch?v=YNfIDH93pNY" class="glightbox video-link">
-            <img 
-              src="https://img.youtube.com/vi/YNfIDH93pNY/maxresdefault.jpg" 
-              alt="Hospital Video Thumbnail"
-              class="video-thumb"
-            >
-            <div class="play-overlay">
-              <div class="play-icon"></div>
+        <div class="container-fluid">
+            <div class="video-wrapper">
+            <video autoplay muted loop class="background-video">
+                <source src="/assets/video/playback.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- <div class="play-overlay">
+                <div class="play-icon"></div>
+            </div> -->
             </div>
-          </a>
         </div>
-      </div>
     </section>
 
     <section class="about-section">
@@ -174,6 +175,7 @@
                 <div class="col-lg-6 py-lg-0 py-3 d-flex align-items-center justify-content-center">
                     <div class="about-content" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
                         <p>Dr. J S Rajkumar, fondly known as Dr. JSR, was a studious and an enthusiastic medical student, who won 32 Gold medals and the Johnston best outgoing student award at the Madras Medical College . He received four medical specializations from the Royal College of Surgeons in the United Kingdom. </p>
+                        <p>Dr. JSR's academic journey began at the prestigious Madras Medical College, where he earned widespread recognition for his dedication to both his studies and patients.</p>
                         <a href="#" class="about-btn">Read More</a>
                     </div>
                 </div>
@@ -242,7 +244,7 @@
                 </div>
                 <div class="col-lg-5 pt-lg-5 pt-0">
                     <div class="care-highlights" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
-                        <div class="row">
+                        <div class="row g-0">
                             <div class="col-lg-6">
                                 <div class="single-care-highlights">
                                     <div class="icon">
@@ -307,48 +309,71 @@
     <section class="progress-section speciality-section py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 mb-5">
+                <div class="col-12 mb-5 text-center">
                     <h2 class="section-title" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         Lifeline Specialities
                     </h2>
                     <p class="section-subtitle" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">A New Form of Personalized Care</p>
                 </div>
-                <div class="col-lg-3">
-                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
-                        <div class="progress-img-wrapper mb-4">
-                            <img src="/assets/img/spacial-icon-01.png" alt="spacial-icon-01">
+
+                <!-- Slick Carousel Wrapper -->
+                <div class="speciality-carousel">
+                    <div>
+                        <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
+                            <div class="progress-img-wrapper mb-4">
+                                <img src="/assets/img/spacial-icon-01.png" alt="spacial-icon-01">
+                            </div>
+                            <h2 class="progress-title">Gastroenterology</h2>
+                            <p class="progress-subtitle">Care for the reproductive <br> system, like a mother care for a <br> child.</p>
                         </div>
-                        <h2 class="progress-title">Gastroenterology</h2>
-                        <p class="progress-subtitle">Care for the reproductive <br> system, like a mother care for a <br> child.</p>
+                    </div>
+                    <div>
+                        <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
+                            <div class="progress-img-wrapper mb-4">
+                                <img src="/assets/img/spacial-icon-02.png" alt="spacial-icon-02">
+                            </div>
+                            <h2 class="progress-title">Orthopedics</h2>
+                            <p class="progress-subtitle">We provide full-fledged care <br> for disorders in the skeletal <br> system.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
+                            <div class="progress-img-wrapper mb-4">
+                                <img src="/assets/img/spacial-icon-03.png" alt="spacial-icon-03">
+                            </div>
+                            <h2 class="progress-title">Neurology</h2>
+                            <p class="progress-subtitle">Care for the brain, nervous <br> system, spinal cord and blood <br> vessels that symbolise our diverse <br> specialties.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="700">
+                            <div class="progress-img-wrapper mb-4">
+                                <img src="/assets/img/spacial-icon-04.png" alt="spacial-icon-04">
+                            </div>
+                            <h2 class="progress-title">Cardiology</h2>
+                            <p class="progress-subtitle">Leaders in heart care, offering <br> advanced diagnostics and <br> personalized treatments.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
+                            <div class="progress-img-wrapper mb-4">
+                                <img src="/assets/img/spacial-icon-02.png" alt="spacial-icon-02">
+                            </div>
+                            <h2 class="progress-title">Orthopedics</h2>
+                            <p class="progress-subtitle">We provide full-fledged care <br> for disorders in the skeletal <br> system.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
+                            <div class="progress-img-wrapper mb-4">
+                                <img src="/assets/img/spacial-icon-03.png" alt="spacial-icon-03">
+                            </div>
+                            <h2 class="progress-title">Neurology</h2>
+                            <p class="progress-subtitle">Care for the brain, nervous <br> system, spinal cord and blood <br> vessels that symbolise our diverse <br> specialties.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
-                        <div class="progress-img-wrapper mb-4">
-                            <img src="/assets/img/spacial-icon-02.png" alt="spacial-icon-02">
-                        </div>
-                        <h2 class="progress-title">Orthopedics</h2>
-                        <p class="progress-subtitle">We provide full-fledged care <br> for disorders in the skeletal <br> system.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
-                        <div class="progress-img-wrapper mb-4">
-                            <img src="/assets/img/spacial-icon-03.png" alt="spacial-icon-03">
-                        </div>
-                        <h2 class="progress-title">Neurology</h2>
-                        <p class="progress-subtitle">Care for the brain, nervous <br> system, spinal cord and blood <br> vessels that symbolise our diverse <br> specialties.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="progress-card" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="700">
-                        <div class="progress-img-wrapper mb-4">
-                            <img src="/assets/img/spacial-icon-04.png" alt="spacial-icon-04">
-                        </div>
-                        <h2 class="progress-title">Cardiology</h2>
-                        <p class="progress-subtitle">Leaders in heart care, offering <br> advanced diagnostics and <br> personalized treatments.</p>
-                    </div>
-                </div>
+
                 <div class="col-12 text-center mt-5">
                     <a href="#" class="about-btn" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">View All Specialities</a>
                 </div>
@@ -556,7 +581,7 @@
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/health-icon-01.png" alt="health-icon-01">
                         </div>
-                        <h2 class="progress-title">Cardiac <br> Checkup</h2>
+                        <h2 class="progress-title"> <a href="#">Cardiac <br> Checkup</a></h2>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -564,7 +589,7 @@
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/health-icon-02.png" alt="health-icon-02">
                         </div>
-                        <h2 class="progress-title">Guthealth <br> Checkup</h2>
+                        <h2 class="progress-title"><a href="#">Guthealth <br> Checkup</a></h2>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -572,7 +597,7 @@
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/health-icon-01.png" alt="health-icon-01">
                         </div>
-                        <h2 class="progress-title">Whole body <br> Checkup</h2>
+                        <h2 class="progress-title"><a href="#">Whole body <br> Checkup</a></h2>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -580,7 +605,7 @@
                         <div class="progress-img-wrapper mb-4">
                             <img src="/assets/img/health-icon-04.png" alt="health-icon-04">
                         </div>
-                        <h2 class="progress-title">Geriatric <br> Checkup</h2>
+                        <h2 class="progress-title"><a href="#">Geriatric <br> Checkup</a></h2>
                     </div>
                 </div>
                 <div class="col-12 text-center mt-5">
@@ -782,8 +807,8 @@
                     <div class="side-blog" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                         <img src="/assets/img/blog-list-img.png" alt="Blog">
                         <div class="side-blog-content">
-                            <h3>Your Body, Your Power: <br> Accelerating Women's Health Action</h3>
-                            <div class="d-flex  justify-content-left align-items-center" style="gap:86px;">
+                            <h3><a href="#">Your Body, Your Power: <br> <span>Accelerating Women's Health Action</span></a></h3>
+                            <div class="d-flex justify-content-between">
                                 <span><i>By Dr. JS Rajkumar</i></span>
                                 <button class="open-btn">OPEN</button>
                             </div>
@@ -793,8 +818,8 @@
                     <div class="side-blog" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
                         <img src="/assets/img/blog-list-img.png" alt="Blog">
                         <div class="side-blog-content">
-                            <h3>Your Body, Your Power: <br> Accelerating Women's Health Action</h3>
-                            <div class="d-flex  justify-content-left align-items-center" style="gap:86px;">
+                            <h3><a href="#">Your Body, Your Power: <br> <span>Accelerating Women's Health Action</span></a></h3>
+                            <div class="d-flex justify-content-between">
                                 <span><i>By Dr. JS Rajkumar</i></span>
                                 <button class="open-btn">OPEN</button>
                             </div>
@@ -804,8 +829,8 @@
                     <div class="side-blog" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="500">
                         <img src="/assets/img/blog-list-img.png" alt="Blog">
                         <div class="side-blog-content">
-                            <h3>Your Body, Your Power: <br> Accelerating Women's Health Action</h3>
-                            <div class="d-flex  justify-content-left align-items-center" style="gap:86px;">
+                            <h3><a href="#">Your Body, Your Power: <br> <span>Accelerating Women's Health Action</span></a></h3>
+                            <div class="d-flex justify-content-between">
                                 <span><i>By Dr. JS Rajkumar</i></span>
                                 <button class="open-btn">OPEN</button>
                             </div>
@@ -1001,154 +1026,196 @@
         </div>
     </section>
     
-        <section class="footer-section">
-            <div class="container">
-                <div class="row">
-                
-                <!-- Column 1 -->
-                <div class="col-md-3">
-                    <ul class="footer-list">
-                    <h3>Scarless Surgery</h3>
-                    <li><a href="#">Gallbladder Removal</a></li>
-                    <li><a href="#">Appendix Removal</a></li>
-                    <li><a href="#">Hernia Repair</a></li>
-                    <li><a href="#">Fundoplication</a></li>
-                    <li><a href="#">Bariatric Surgeries</a></li>
-                    <li><a href="#">Colorectal Surgeries</a></li>
-                    <li><a href="#">Small Bowel Surgery</a></li>
-                    <li><a href="#">Liver Surgery</a></li>
-                    <li><a href="#">Pancreatic Surgery</a></li>
-                    <li><a href="#">Spleen Removal</a></li>
-                    <li><a href="#">Adrenal Gland Removal</a></li>
-                    <li><a href="#">Nephrectomy</a></li>
-                    <li><a href="#">Urological Procedures</a></li>
-                    <li><a href="#">Gynecological Surgeries</a></li>
-                    <li><a href="#">Oncological Surgeries</a></li>
-                    <li><a href="#">Thoracic Surgeries</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 2 -->
-                <div class="col-md-3">
-                    <ul class="footer-list">
-                    <h3>Bariatric / Metabolic Surgery</h3>
-                    <li><a href="#">Sleeve Gastrectomy</a></li>
-                    <li><a href="#">Roux-en-Y Gastric Bypass</a></li>
-                    <li><a href="#">One Anastomosis Gastric Bypass</a></li>
-                    <li><a href="#">Lap Band Surgery</a></li>
-                    <li><a href="#">Biliopancreatic Diversion with</a></li>
-                    <li><a href="#">Duodenal Switch (BPD/DS)</a></li>
-                    <li><a href="#">Revision Bariatric Surgery</a></li>
-                    <li><a href="#">Intragastric Balloon</a></li>
-                    <li><a href="#">Endoscopic Sleeve Gastroplasty – ESG</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 3 -->
-                <div class="col-md-3">
-                    <ul class="footer-list">
-                    <h3>Surgical Gastroentrology</h3>
-                    <li><a href="#">Upper GI Surgeries</a></li>
-                    <li><a href="#">Esophagectomy</a></li>
-                    <li><a href="#">GERD / Acid reflux surgery</a></li>
-                    <li><a href="#">Total Gastrectomy</a></li>
-                    <li><a href="#">Heller’s Myotomy</a></li>
-                    
-                    <li style="font-weight: bold; text-transform: uppercase;color:white;">
-                        Hepato-Pancreato-Biliary (HPB)
-                    </li>
-                    
-                    <li><a href="#">Hepatectomy</a></li>
-                    <li><a href="#">Liver Cyst Removal</a></li>
-                    <li><a href="#">Cholecystectomy</a></li>
-                    <li><a href="#">Choledochal Cyst Excision</a></li>
-                    <li><a href="#">Biliary Reconstruction</a></li>
-                    <li><a href="#">Whipple’s Procedure</a></li>
-                    <li><a href="#">Distal Pancreatectomy Cystogastrostomy</a></li>
-                    <li><a href="#">Splenectomy</a></li>
-                    
-                    <li><a href="#">Colorectal Surgeries</a></li>
-                    <li><a href="#">Colectomy</a></li>
-                    <li><a href="#">Low Anterior Resection</a></li>
-                    <li><a href="#">Abdominoperineal Resection</a></li>
-                    <li><a href="#">Rectopexy</a></li>
-                    <li><a href="#">Ulcerative Colitis</a></li>
-                    <li><a href="#">Crohn’s Disease</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 4 -->
-                <div class="col-md-3">
-                    <ul class="footer-list">
-                    <h3>Surgical Gastroentrology</h3>
-                    <li><a href="#">Upper GI Surgeries</a></li>
-                    <li><a href="#">Esophagectomy</a></li>
-                    <li><a href="#">GERD / Acid reflux surgery</a></li>
-                    <li><a href="#">Total Gastrectomy</a></li>
-                    <li><a href="#">Heller’s Myotomy</a></li>
-                    
-                    <li style="font-weight: bold; text-transform: uppercase;color:white;">
-                        Hepato-Pancreato-Biliary (HPB)
-                    </li>
-                    
-                    <li><a href="#">Hepatectomy</a></li>
-                    <li><a href="#">Liver Cyst Removal</a></li>
-                    <li><a href="#">Cholecystectomy</a></li>
-                    <li><a href="#">Choledochal Cyst Excision</a></li>
-                    <li><a href="#">Biliary Reconstruction</a></li>
-                    <li><a href="#">Whipple’s Procedure</a></li>
-                    <li><a href="#">Distal Pancreatectomy Cystogastrostomy</a></li>
-                    <li><a href="#">Splenectomy</a></li>
-                    
-                    <li><a href="#">Colorectal Surgeries</a></li>
-                    <li><a href="#">Colectomy</a></li>
-                    <li><a href="#">Low Anterior Resection</a></li>
-                    <li><a href="#">Abdominoperineal Resection</a></li>
-                    <li><a href="#">Rectopexy</a></li>
-                    <li><a href="#">Ulcerative Colitis</a></li>
-                    <li><a href="#">Crohn’s Disease</a></li>
-                    </ul>
-                </div>
-                
-                </div>
-                
-                <!-- Bottom Copyright -->
-                <div class="footer-bottom">
-                <p class="copyright">
-                    Copyright © 2025 Lifeline Multi Speciality Hospitals Private Limited. All Rights Reserved.
-                </p>
-                </div>
-                
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+            
+            <!-- Column 1 -->
+            <div class="col-md-3">
+                <ul class="footer-list">
+                <h3>Scarless Surgery</h3>
+                <li><a href="#">Gallbladder Removal</a></li>
+                <li><a href="#">Appendix Removal</a></li>
+                <li><a href="#">Hernia Repair</a></li>
+                <li><a href="#">Fundoplication</a></li>
+                <li><a href="#">Bariatric Surgeries</a></li>
+                <li><a href="#">Colorectal Surgeries</a></li>
+                <li><a href="#">Small Bowel Surgery</a></li>
+                <li><a href="#">Liver Surgery</a></li>
+                <li><a href="#">Pancreatic Surgery</a></li>
+                <li><a href="#">Spleen Removal</a></li>
+                <li><a href="#">Adrenal Gland Removal</a></li>
+                <li><a href="#">Nephrectomy</a></li>
+                <li><a href="#">Urological Procedures</a></li>
+                <li><a href="#">Gynecological Surgeries</a></li>
+                <li><a href="#">Oncological Surgeries</a></li>
+                <li><a href="#">Thoracic Surgeries</a></li>
+                </ul>
             </div>
+            
+            <!-- Column 2 -->
+            <div class="col-md-3">
+                <ul class="footer-list">
+                <h3>Bariatric / Metabolic Surgery</h3>
+                <li><a href="#">Sleeve Gastrectomy</a></li>
+                <li><a href="#">Roux-en-Y Gastric Bypass</a></li>
+                <li><a href="#">One Anastomosis Gastric Bypass</a></li>
+                <li><a href="#">Lap Band Surgery</a></li>
+                <li><a href="#">Biliopancreatic Diversion with</a></li>
+                <li><a href="#">Duodenal Switch (BPD/DS)</a></li>
+                <li><a href="#">Revision Bariatric Surgery</a></li>
+                <li><a href="#">Intragastric Balloon</a></li>
+                <li><a href="#">Endoscopic Sleeve Gastroplasty – ESG</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3 -->
+            <div class="col-md-3">
+                <ul class="footer-list">
+                <h3>Surgical Gastroentrology</h3>
+                <li><a href="#">Upper GI Surgeries</a></li>
+                <li><a href="#">Esophagectomy</a></li>
+                <li><a href="#">GERD / Acid reflux surgery</a></li>
+                <li><a href="#">Total Gastrectomy</a></li>
+                <li><a href="#">Heller’s Myotomy</a></li>
+                
+                <li style="font-weight: bold; text-transform: uppercase;color:white;">
+                    Hepato-Pancreato-Biliary (HPB)
+                </li>
+                
+                <li><a href="#">Hepatectomy</a></li>
+                <li><a href="#">Liver Cyst Removal</a></li>
+                <li><a href="#">Cholecystectomy</a></li>
+                <li><a href="#">Choledochal Cyst Excision</a></li>
+                <li><a href="#">Biliary Reconstruction</a></li>
+                <li><a href="#">Whipple’s Procedure</a></li>
+                <li><a href="#">Distal Pancreatectomy Cystogastrostomy</a></li>
+                <li><a href="#">Splenectomy</a></li>
+                
+                <li><a href="#">Colorectal Surgeries</a></li>
+                <li><a href="#">Colectomy</a></li>
+                <li><a href="#">Low Anterior Resection</a></li>
+                <li><a href="#">Abdominoperineal Resection</a></li>
+                <li><a href="#">Rectopexy</a></li>
+                <li><a href="#">Ulcerative Colitis</a></li>
+                <li><a href="#">Crohn’s Disease</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4 -->
+            <div class="col-md-3">
+                <ul class="footer-list">
+                <h3>Surgical Gastroentrology</h3>
+                <li><a href="#">Upper GI Surgeries</a></li>
+                <li><a href="#">Esophagectomy</a></li>
+                <li><a href="#">GERD / Acid reflux surgery</a></li>
+                <li><a href="#">Total Gastrectomy</a></li>
+                <li><a href="#">Heller’s Myotomy</a></li>
+                
+                <li style="font-weight: bold; text-transform: uppercase;color:white;">
+                    Hepato-Pancreato-Biliary (HPB)
+                </li>
+                
+                <li><a href="#">Hepatectomy</a></li>
+                <li><a href="#">Liver Cyst Removal</a></li>
+                <li><a href="#">Cholecystectomy</a></li>
+                <li><a href="#">Choledochal Cyst Excision</a></li>
+                <li><a href="#">Biliary Reconstruction</a></li>
+                <li><a href="#">Whipple’s Procedure</a></li>
+                <li><a href="#">Distal Pancreatectomy Cystogastrostomy</a></li>
+                <li><a href="#">Splenectomy</a></li>
+                
+                <li><a href="#">Colorectal Surgeries</a></li>
+                <li><a href="#">Colectomy</a></li>
+                <li><a href="#">Low Anterior Resection</a></li>
+                <li><a href="#">Abdominoperineal Resection</a></li>
+                <li><a href="#">Rectopexy</a></li>
+                <li><a href="#">Ulcerative Colitis</a></li>
+                <li><a href="#">Crohn’s Disease</a></li>
+                </ul>
+            </div>
+            
+            </div>
+            
+            <!-- Bottom Copyright -->
+            <div class="footer-bottom">
+            <p class="copyright">
+                Copyright © 2025 Lifeline Multi Speciality Hospitals Private Limited. All Rights Reserved.
+            </p>
+            </div>
+            
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
     
-    document.addEventListener('DOMContentLoaded', () => {
-        sal({
-          threshold: 0.2,
-          once: true
+        document.addEventListener('DOMContentLoaded', () => {
+            sal({
+            threshold: 0.2,
+            once: true
+            });
         });
-    });
-    
-    document.querySelectorAll('.footer-list').forEach(list => {
-      let delay = 50;
-      list.querySelectorAll('li').forEach(li => {
-        li.setAttribute('data-sal', 'slide-up');
-        li.setAttribute('data-sal-duration', '1000');
-        li.setAttribute('data-sal-delay', delay);
-        delay += 50;
-      });
-    });
-    // sal();
+        
+        document.querySelectorAll('.footer-list').forEach(list => {
+        let delay = 50;
+        list.querySelectorAll('li').forEach(li => {
+            li.setAttribute('data-sal', 'slide-up');
+            li.setAttribute('data-sal-duration', '1000');
+            li.setAttribute('data-sal-delay', delay);
+            delay += 50;
+        });
+        });
+        // sal();
 
-    
         const lightbox = GLightbox({
             selector: '.glightbox',
             type: 'video',
             source: 'youtube',
             autoplayVideos: true,
+        });
+
+        $('.speciality-carousel').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: false,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+        $(".banner-carousel").slick({
+            autoplay: true,               
+            autoplaySpeed: 2500,          
+            infinite: true,               
+            speed: 1000,                 
+            slidesToShow: 1,             
+            slidesToScroll: 1,    
+            arrows: false,               
+            dots: false,              
+            pauseOnHover: true,  
         });
         
         $(".testimonial-slider").slick({
