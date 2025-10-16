@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/datalock/lifelinehospital.datalock.in
+    - export DEPLOYPATH=/home2/datalock/lifelinehospital.datalock.in/
     - /bin/cp -R * $DEPLOYPATH
